@@ -4,45 +4,110 @@ Fuente
 
 @import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap");
 
-:root{
+:root {
     --color-negro: black;
     --color-blanco: #FFF;
     --fuente-playfair: "Playfair Display", serif;
 }
 
-body{
+body {
     background-image: url("https://img.freepik.com/vector-premium/bandera-italia-efecto-ondulado-proporcion-oficial_292608-2021.jpg");
-    background-size: cover; /* Ajusta la imagen para que cubra todo el fondo */
-    background-repeat: no-repeat; /* Evita que la imagen se repita */
-    background-position: center center; /* Centra la imagen en la pantalla */
+    background-size: cover;
+    /* Ajusta la imagen para que cubra todo el fondo */
+    background-repeat: no-repeat;
+    /* Evita que la imagen se repita */
+    background-position: center center;
+    /* Centra la imagen en la pantalla */
 }
 
 
 /*Header*/
-.container__header{
-   
-   background: blue;
+.container__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* Centra verticalmente los elementos */
+    border: 5px solid rgb(0, 0, 0);
+    /* Contorno NEGRO */
+    border-radius: 15px;
+    /* Bordes redondeados */
+    padding: 10px;
+    margin: 20px auto;
+    /* Centra el header horizontalmente */
+    max-width: 1000px;
+    /* Limita el ancho máximo del encabezado */
 }
-.container__header__titulo{
+
+.container_header_imagen {
+    width: 100px;
+}
+
+.container_header_imagen2 {
+    width: 100px;
+}
+
+.container__header__titulo {
     text-align: center;
     font-family: var(--fuente-playfair);
     font-size: 50px;
-
 }
 
 /*Main*/
-.container__main{
+.container__main {
     display: flex;
     align-items: center;
     justify-content: center;
-} 
-
-.container__main__imagenes{
-    width: 300px;
-    aspect-ratio: 20/5;
-    object-fit: cover;
 }
 
+.container__main__section {
+    display: flex;
+    gap: 15px;
+    flex-direction: column;
+    margin: 120px;
+}
+.container__main__section__div {
+    display: flex;
+    place-items: center;
+    gap: 10px;
+}
+
+    
+.container__main__imagenes {
+    width: 300px;
+    height: 100px;
+    aspect-ratio: 20/5;
+    object-fit: cover;
+    border: 3px solid rgb(0, 0, 0);
+}
+
+
 .container__main__label{
+    font-family: var(--fuente-playfair);
+    margin-left: 15px; /* Espacio entre la imagen y el texto */
+    font-size: 25px; 
+}
+
+.container__main__section__input {
+    width: 20px;
+    height: 20px;
+    transform: scale(1.5); /* Aumenta el tamaño del checkbox */
+    margin: 10px;
+}
+
+/*Footer*/
+.container__footer__modal {
+    width: 60%;
+    height: 60%;
+    display: grid;
+    place-items: center;
+}
+
+.container__footer__modal__form {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.container__footer__modal__form__label {
     font-family: var(--fuente-playfair);
 }

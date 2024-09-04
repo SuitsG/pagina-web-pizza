@@ -8,51 +8,58 @@
 
 </head>
 <body>
-    
-    <header container__header>    
-        <h1 class="container__header__titulo">PIZZA RICH</h1>
+    <header class="container__header">
+    <div> 
+        <img class="container_header_imagen" src="assets/Pizza_Steve.webp" alt="Imagen Izquierda">   
+     </div>
+    <div>
+        <h1 class="container__header__titulo">PIZZA RICH</h1></div>
+    <div>
+        <img class="container_header_imagen2" src="assets/pngwing.com.png" alt="Imagen Derecha">  
+    </div>
     </header>
     <main class="container__main">
-        <section>
-            <div>
-                <input type="checkbox">
+        <section class="container__main__section">
+            <div class="container__main__section__div">
+                <input class="container__main__section__input"  type="checkbox">
                 <img class="container__main__imagenes" src="assets/jamoqueso.jpg" alt="">
                 <label class="container__main__label" for="">JAMON QUESO</label>
             </div>
-            <div>
-                <input type="checkbox">
+            <div class="container__main__section__div">
+                <input class="container__main__section__input" type="checkbox">
                 <img class="container__main__imagenes" src="assets/napolitana.webp" alt="">
                 <label class="container__main__label" for="">NAPOLITANA</label>
             </div>
-            <div>
-                <input type="checkbox">
+            <div class="container__main__section__div">
+                <input class="container__main__section__input" type="checkbox">
                 <img class="container__main__imagenes" src="assets/quesomusarella.png" alt="">
                 <label class="container__main__label" for="">MOZZARELLA</label>
             </div>
         </section>
-        <section>
-            <div>
-                <input type="checkbox">
+        <section class="container__main__section">
+            <div class="container__main__section__div">
+                <input class="container__main__section__input" type="checkbox">
                 <img class="container__main__imagenes" src="assets/pepperoni.webp" alt="">
                 <label class="container__main__label" for="">PEPERONI</label>
             </div>
-            <div>
-                <input type="checkbox">
+            <div class="container__main__section__div">
+                <input class="container__main__section__input" type="checkbox">
                 <img class="container__main__imagenes" src="assets/veggie.jpg" alt="">
                 <label class="container__main__label" for="">VEGGIE</label>
             </div>
-            <div>
-                <input type="checkbox">
+            <div class="container__main__section__div">
+                <input class="container__main__section__input" type="checkbox">
                 <img class="container__main__imagenes" src="assets/hawaiana.avif" alt="">
                 <label class="container__main__label" for="">HAWAIANA</label>
             </div>
 
         </section>
     </main>
-    <footer>
-        <button type="submit" id="bottom__modal" class="button__hacer__pedido">HACER PEDIDO</button>
-        <dialog class="container__modal">
-            <form action="" method="dialog">
+    <footer class="footer">
+        <button type="button" class="button__hacer__pedido">HACER PEDIDO</button>
+        <section container__footer__modal>
+        <dialog class="modal">
+            <form class="container__footer__modal__form" method="">
                 <div>
                 <label for="">NOMBRE</label>
                 <input type="text">
@@ -70,10 +77,11 @@
                 <input type="text">
                 </div>
                 <div>
-                <button type="submit" class="button__enviar__pedido">HACER PEDIDO</button>
+                <button type="submit" class="button__enviar__pedido">ENVIAR PEDIDO</button>
                 </div>
             </form>
         </dialog>
+    </section>
     </footer>
 </body>
 <script src="js/app.js"></script>
