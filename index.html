@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PIZZA RICH</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="imagen/x-icon" href="assets/">
 
 </head>
 <body>
@@ -56,26 +57,31 @@
         </section>
     </main>
     <footer class="footer">
-        <button type="button" class="button__hacer__pedido">HACER PEDIDO</button>
+        <button type="button" class="button__hacer__pedido">REALIZAR PEDIDO</button>
         <section container__footer__modal>
         <dialog class="modal">
             <form class="container__footer__modal__form" method="">
+                <div >
+                    <h2 class="detalle__pedido">DETALLE PEDIDO</h2>
+                    </div>
+              <section class="container__footer__modal__form__selection">      
                 <div>
                 <label for="">NOMBRE</label>
-                <input type="text">
-                </div>
+                <input class="container__footer__modal__form__input" type="text">
+                </div>  
                 <div>
                 <label for="">DIRECCIÓN</label>
-                <input type="text">
+                <input class="container__footer__modal__form__input" type="text">
                 </div>
                 <div>
                 <label for="">TELEFONO</label>
-                <input type="text">
+                <input class="container__footer__modal__form__input" type="text">
                 </div>
                 <div>
                 <label for="">CANTIDAD DE PIZZAS</label>
-                <input type="text">
+                <input class="container__footer__modal__form__input" type="text">
                 </div>
+                </section>
                 <div>
                 <button type="submit" class="button__enviar__pedido">ENVIAR PEDIDO</button>
                 </div>
