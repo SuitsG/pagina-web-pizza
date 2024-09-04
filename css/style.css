@@ -95,6 +95,11 @@ body {
 }
 
 /*Footer*/
+.footer{
+display: flex;
+align-items: center;
+justify-content: center;
+}
 .container__footer__modal {
     width: 60%;
     height: 60%;
@@ -103,11 +108,49 @@ body {
 }
 
 .container__footer__modal__form {
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
+    display: flex;  
+    flex-direction:column;
+    gap: 20px;
+    align-items: center;
+
+}
+.container__footer__modal__form__selection{
+display: flex;
+flex-direction:column;
+gap: 30px;
+
+}
+.container__footer__modal__form__input{
+ border-radius: 5px; /* Bordes redondeados */
+
 }
 
 .container__footer__modal__form__label {
     font-family: var(--fuente-playfair);
+    border-radius: 10px; /* Bordes redondeados */
+
+}
+
+
+
+.button__hacer__pedido{
+    font-family: var(--fuente-playfair);
+    background: #d60000;
+    font-size: 40px;
+    color: aliceblue;
+    border-radius: 10px; /* Bordes redondeados */
+}
+.button__enviar__pedido{
+    font-family: var(--fuente-playfair);
+    background: #d60000;
+    font-size: 20px;
+    color: aliceblue;
+    border-radius: 10px; /* Bordes redondeados */
+
+}
+
+/* detalles de pedido */
+
+.detalle__pedido{
+font-size: 40px;
 }
