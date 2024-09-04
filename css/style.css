@@ -1,0 +1,48 @@
+/*
+Fuente
+*/
+
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap");
+
+:root{
+    --color-negro: black;
+    --color-blanco: #FFF;
+    --fuente-playfair: "Playfair Display", serif;
+}
+
+body{
+    background-image: url("https://img.freepik.com/vector-premium/bandera-italia-efecto-ondulado-proporcion-oficial_292608-2021.jpg");
+    background-size: cover; /* Ajusta la imagen para que cubra todo el fondo */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    background-position: center center; /* Centra la imagen en la pantalla */
+}
+
+
+/*Header*/
+.container__header{
+   
+   background: blue;
+}
+.container__header__titulo{
+    text-align: center;
+    font-family: var(--fuente-playfair);
+    font-size: 50px;
+
+}
+
+/*Main*/
+.container__main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+} 
+
+.container__main__imagenes{
+    width: 300px;
+    aspect-ratio: 20/5;
+    object-fit: cover;
+}
+
+.container__main__label{
+    font-family: var(--fuente-playfair);
+}
