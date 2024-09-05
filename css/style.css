@@ -49,7 +49,7 @@ body {
 .container__header__titulo {
     text-align: center;
     font-family: var(--fuente-playfair);
-    font-size: 50px;
+    font-size: 60px;
 }
 
 /*Main*/
@@ -153,4 +153,9 @@ gap: 30px;
 
 .detalle__pedido{
 font-size: 40px;
+}
+
+.container__footer__div{
+display: flex;
+flex-direction: column;
 }
