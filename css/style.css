@@ -46,7 +46,7 @@ body {
     width: 100px;
 }
 
-.container__header__titulo {
+.container_header_titulo {
     text-align: center;
     font-family: var(--fuente-playfair);
     font-size: 60px;
@@ -59,20 +59,20 @@ body {
     justify-content: center;
 }
 
-.container__main__section {
+.container_main_section {
     display: flex;
     gap: 15px;
     flex-direction: column;
     margin: 120px;
 }
-.container__main__section__div {
+.container_mainsection_div {
     display: flex;
     place-items: center;
     gap: 10px;
 }
 
     
-.container__main__imagenes {
+.container_main_imagenes {
     width: 300px;
     height: 100px;
     aspect-ratio: 20/5;
@@ -81,13 +81,13 @@ body {
 }
 
 
-.container__main__label{
+.container_main_label{
     font-family: var(--fuente-playfair);
     margin-left: 15px; /* Espacio entre la imagen y el texto */
     font-size: 25px; 
 }
 
-.container__main__section__input {
+.container_mainsection_input {
     width: 20px;
     height: 20px;
     transform: scale(1.5); /* Aumenta el tamaño del checkbox */
@@ -100,32 +100,32 @@ display: flex;
 align-items: center;
 justify-content: center;
 }
-.container__footer__modal {
+.container_footer_modal {
     width: 60%;
     height: 60%;
     display: grid;
     place-items: center;
 }
 
-.container__footer__modal__form {
+.container_footermodal_form {
     display: flex;  
     flex-direction:column;
     gap: 20px;
     align-items: center;
 
 }
-.container__footer__modal__form__selection{
+.container_footermodalform_selection{
 display: flex;
 flex-direction:column;
 gap: 30px;
 
 }
-.container__footer__modal__form__input{
+.container_footermodalform_input{
  border-radius: 5px; /* Bordes redondeados */
 
 }
 
-.container__footer__modal__form__label {
+.container_footermodalform_label {
     font-family: var(--fuente-playfair);
     border-radius: 10px; /* Bordes redondeados */
 
@@ -133,14 +133,14 @@ gap: 30px;
 
 
 
-.button__hacer__pedido{
+.button_hacer_pedido{
     font-family: var(--fuente-playfair);
     background: #d60000;
     font-size: 40px;
     color: aliceblue;
     border-radius: 10px; /* Bordes redondeados */
 }
-.button__enviar__pedido{
+.button_enviar_pedido{
     font-family: var(--fuente-playfair);
     background: #d60000;
     font-size: 20px;
@@ -155,7 +155,7 @@ gap: 30px;
 font-size: 40px;
 }
 
-.container__footer__div{
+.container_footer_div{
 display: flex;
-flex-direction: column;
+flex-direction: column;
 }
