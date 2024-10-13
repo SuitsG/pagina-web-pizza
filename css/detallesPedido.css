@@ -1,0 +1,208 @@
+/*
+Fuente
+*/
+
+@import url("https://fonts.googleapis.com/css2?family=Oleo+Script:wght@400;700&display=swap");
+
+:root {
+  --color-negro: black;
+  --color-blanco: #fff;
+  --fuente-oleo: "Oleo Script", serif;
+  --color-rojo: #c00000;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: var(--fuente-oleo);
+  background-image: url("/assets/pizzafondo.png");
+  background-size: cover;
+  /* Ajusta la imagen para que cubra todo el fondo */
+  background-repeat: no-repeat;
+  /* Evita que la imagen se repita */
+  background-position: center center;
+  /* Centra la imagen en la pantalla */
+  background-attachment: fixed;
+  /* Hace que el fondo permanezca fijo al hacer scroll */
+}
+
+/*Header*/
+.header {
+  display: flex;
+  flex-direction: column;
+}
+.header__div__volvel {
+  display: flex;
+  justify-content: end;
+}
+
+/*.header__div__volvel__a*/
+.header__div__volvel__a {
+  text-decoration: none;
+  outline: none;
+  cursor: pointer;
+  border: none;
+  padding: 0.9rem 2rem;
+  margin: 1rem;
+  font-size: inherit;
+  position: relative;
+  display: inline-block;
+  letter-spacing: 0.05rem;
+  font-weight: 700;
+  font-size: 17px;
+  border-radius: 500px;
+  overflow: hidden;
+  background: var(--color-rojo);
+  color: ghostwhite;
+}
+
+.header__div__volvel__a span {
+ position: relative;
+ z-index: 10;
+ transition: color 0.4s;
+}
+
+.header__div__volvel__a:hover span {
+ color: black;
+}
+
+.header__div__volvel__a::before,
+.header__div__volvel__a::after {
+ position: absolute;
+ top: 0;
+ left: 0;
+ width: 100%;
+ height: 100%;
+ z-index: 0;
+}
+
+.header__div__volvel__a::before {
+ content: "";
+ background: #000;
+ width: 120%;
+ left: -10%;
+ transform: skew(30deg);
+ transition: transform 0.4s cubic-bezier(0.3, 1, 0.8, 1);
+}
+
+.header__div__volvel__a:hover::before {
+ transform: translate3d(100%, 0, 0);
+}
+
+
+/*Titulo*/
+.header__div__titulo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header__div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+  width: 50%;
+  margin: 0 0 40px 0;
+  overflow: hidden;
+  background-color: var(--color-rojo);
+  border: 5px solid var(--color-negro);
+  border-radius: 15px;
+}
+
+
+.header_titulo {
+  color: var(--color-blanco);
+  text-align: center;
+  font-size: 50px;
+}
+
+/*Main*/
+
+.main {
+  display: flex;
+  justify-content: center;
+}
+
+.main__div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: var(--color-negro);
+  width: 30%;
+  height: 60vh;
+  border-radius: 25px;
+  padding: 1rem;
+  gap: 2rem;
+  height: auto;
+}
+
+.main__div__titulo {
+  font-size: 50px;
+  font-family: var(--fuente-oleo);
+  color: var(--color-blanco);
+}
+
+.main__div__p {
+  text-align: left;
+  font-size: 40px;
+  font-family: var(--fuente-oleo);
+  color: var(--color-blanco);
+}
+
+/*Button*/
+.main__div__a {
+  text-decoration: none;
+  outline: none;
+  cursor: pointer;
+  border: none;
+  padding: 0.9rem 2rem;
+  margin: 0;
+  font-size: inherit;
+  position: relative;
+  display: inline-block;
+  letter-spacing: 0.05rem;
+  font-weight: 700;
+  font-size: 1.5rem;
+  border-radius: 500px;
+  overflow: hidden;
+  background: var(--color-rojo);
+  color: var(--color-negro);
+}
+
+.main__div__a span {
+ position: relative;
+ z-index: 10;
+ transition: color 0.4s;
+}
+
+.main__div__a:hover span {
+ color: black;
+}
+
+.main__div__a::before,
+.main__div__a::after {
+ position: absolute;
+ top: 0;
+ left: 0;
+ width: 100%;
+ height: 100%;
+ z-index: 0;
+}
+
+.main__div__a::before {
+ content: "";
+ background: var(--color-blanco);
+ width: 120%;
+ left: -10%;
+ transform: skew(30deg);
+ transition: transform 0.4s cubic-bezier(0.3, 1, 0.8, 1);
+}
+
+.main__div__a:hover::before {
+ transform: translate3d(100%, 0, 0);
+}

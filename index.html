@@ -4,106 +4,136 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PIZZA RICH</title>
+    <title>YUMMY PIZZA </title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="icon" type="image/x-icon" href="assets/logo.png">
+    <script>
+        function enviarFormularios() {
+            var formulario1 = document.getElementById('formulario1');
+
+            // Verificar si el formulario es válido antes de enviarlo
+            if (formulario1.checkValidity()) {
+                formulario1.submit();  // Solo se envía si es válido
+            } else {
+                formulario1.reportValidity();  // Muestra los mensajes de error
+            } 
+        }
+    </script>
 </head>
 
 <body>
+
+    <!-- HEADER-->
     <header class="container__header">
-        <div>
-            <img class="container_header_imagen" src="assets/Pizza_Steve.webp" alt="Imagen Izquierda">
-        </div>
-        <div>
-            <h1 class="container_header_titulo">PIZZA RICH</h1>
-        </div>
-        <div>
-            <img class="container_header_imagen2" src="assets/pngwing.com.png" alt="Imagen Derecha">
+        <div class="container__header__div">
+            <h1 class="container_header_titulo">YUMMY PIZZA</h1>
         </div>
     </header>
-    <main class="container__main">
-        <section class="container_main_section">
-            <div class="container_mainsection_div">
-                <input class="container_mainsection_input" type="checkbox">
-                <img class="container_main_imagenes" src="assets/jamoqueso.jpg" alt="">
-                <label class="container_main_label" for="">JAMON QUESO</label>
-            </div>
-            <div class="container_mainsection_div">
-                <input class="container_mainsection_input" type="checkbox">
-                <img class="container_main_imagenes" src="assets/napolitana.webp" alt="">
-                <label class="container_main_label" for="">NAPOLITANA</label>
-            </div>
-            <div class="container_mainsection_div">
-                <input class="container_mainsection_input" type="checkbox">
-                <img class="container_main_imagenes" src="assets/quesomusarella.png" alt="">
-                <label class="container_main_label" for="">MOZZARELLA</label>
-            </div>
-        </section>
-        <section class="container_main_section">
-            <div class="container_mainsection_div">
-                <input class="container_mainsection_input" type="checkbox">
-                <img class="container_main_imagenes" src="assets/pepperoni.webp" alt="">
-                <label class="container_main_label" for="">PEPERONI</label>
-            </div>
-            <div class="container_mainsection_div">
-                <input class="container_mainsection_input" type="checkbox">
-                <img class="container_main_imagenes" src="assets/veggie.jpg" alt="">
-                <label class="container_main_label" for="">VEGGIE</label>
-            </div>
-            <div class="container_mainsection_div">
-                <input class="container_mainsection_input" type="checkbox">
-                <img class="container_main_imagenes" src="assets/hawaiana.avif" alt="">
-                <label class="container_main_label" for="">HAWAIANA</label>
-            </div>
+    <!-- MAIN-->
+    <form action="datosUsuario.php" method="POST" id="formulario1">
+        <main class="container__main">
+            
+            <section class="container__section__izquierda">  
+                <div class="main__section__izquierda__slide"> 
+                    <img class="container__main__section__imagen" src="/assets/hawaiana.avif" alt="">
+                    <img class="container__main__section__imagen" src="/assets/jamoqueso.jpg" alt="">
+                    <img class="container__main__section__imagen" src="/assets/napolitana.webp" alt="">
+                    <img class="container__main__section__imagen" src="/assets/veggie.jpg" alt="">
+                    <img class="container__main__section__imagen" src="/assets/mozzarella.png" alt="">
 
-        </section>
-    </main>
+                    <!-- -->
+                    <img class="container__main__section__imagen" src="/assets/hawaiana.avif" alt="">
+                    <img class="container__main__section__imagen" src="/assets/jamoqueso.jpg" alt="">
+                    <img class="container__main__section__imagen" src="/assets/napolitana.webp" alt="">
+                    <img class="container__main__section__imagen" src="/assets/veggie.jpg" alt="">
+                    <img class="container__main__section__imagen" src="/assets/mozzarella.png" alt="">
+                    </div>
+            </section>
+            <section class="container__form__derecha">
+
+                <h2 class="container__section__titulo">MENÚ</h2>
+                <div class="container__section__div">
+                    <P class="container__section__parrafo">Jamón Queso</P>
+                    <p class="container__section__parrafo">$20.000</p>
+                    <input class="container__section__input" type="number" id="numero" name="jamonQueso"
+                        min="0" max="9" maxlength="1" title="Debe ser un número de dígito"
+                        value="0"
+                        >
+                </div>
+                <div class="container__section__div">
+                    <P class="container__section__parrafo">Napolitana</P>
+                    <p class="container__section__parrafo">$15.000</p>
+                    <input class="container__section__input" type="number" id="numero" name="napolitana"
+                        min="0" max="9" maxlength="1" title="Debe ser un número de dígito"
+                        value="0">
+                </div>
+                <div class="container__section__div">
+                    <P class="container__section__parrafo">Mozzarella</P>
+                    <p class="container__section__parrafo">$15.000</p>
+                    <input class="container__section__input" type="number" id="numero" name="mozzarella"
+                        min="0" max="9" maxlength="1" title="Debe ser un número de dígito"
+                        value="0">
+                </div>
+                <div class="container__section__div">
+                    <P class="container__section__parrafo">Pepperoni</P>
+                    <p class="container__section__parrafo">$22.000</p>
+                    <input class="container__section__input" type="number" id="numero" name="pepperoni"
+                        min="0" max="9" maxlength="1" title="Debe ser un número de dígito"
+                        value="0"
+                        >
+                </div>
+                <div class="container__section__div">
+                    <P class="container__section__parrafo">Veggie</P>
+                    <p class="container__section__parrafo">$18.000</p>
+                    <input class="container__section__input" type="number" id="numero" name="veggie"
+                        min="0" max="9" maxlength="1" title="Debe ser un número de dígito"
+                        value="0"
+                        >
+                </div>
+                <div class="container__section__div">
+                    <P class="container__section__parrafo">Hawaiana</P>
+                    <p class="container__section__parrafo">$20.000</p>
+                    <input class="container__section__input" type="number" id="numero" name="hawaiana" 
+                        min="0" max="9" maxlength="1" title="Debe ser un número de dígito"
+                        value="0">
+                </div>
+            </section>
+        </main>
+        <main class="container__main__dos">
+            <section class="container__form">
+                <section class="container_form_selection">
+                    <div>
+                        <p class="container__form__parrafo">Nombre</p>
+                        <input class="container__form__input" type="text" name="nombre" pattern="[a-zA-Z\s]+"
+                            title="Solo se permiten letras y espacios" required>
+                    </div>
+                    <div>
+                        <p class="container__form__parrafo">Dirección</p>
+                        <input class="container__form__input" type="text" title="Campo Obligatorio" name="direccion"
+                            pattern="[a-zA-Z0-9\s.,#-]+" title="Campo Obligatorio" required>
+                    </div>
+                    <div>
+                        <p class="container__form__parrafo">Teléfono</p>
+                        <input class="container__form__input" type="text" id="numero" name="telefono" pattern="\d{10}"
+                            minlength="10" maxlength="10" title="Debe ser un número de 10 dígitos" required>
+                    </div>
+                    <div>
+                        <p class="container__form__parrafo">Email</p>
+                        <input class="container__form__input" type="text" id="cantidad" name="email"
+                            pattern="[a-zA-Z0-9\s.,#-]+" title="Campo Obligatorio" required>
+                    </div>
+
+
+                </section>
+
+            </section>
+        </main>
+    </form>
     <footer class="footer">
-        <button type="button" class="button_hacer_pedido">REALIZAR PEDIDO</button>
-        <section container_footer_modal>
-            <dialog class="modal">
-                <form class="container_footermodal_form" method="">
-                    <div>
-                        <h2 class="detalle__pedido">DETALLES PEDIDO</h2>
-                    </div>
-                    <section class="container_footermodalform_selection">
-                        <div>
-                            <label for="">NOMBRE</label>
-                            <input class="container_footermodalform_input" type="text" pattern="[a-zA-Z\s]+"
-                                title="Solo se permiten letras y espacios" required>
-                        </div>
-                        <div>
-                            <label for="">DIRECCIÓN</label>
-                            <input class="container_footermodalform_input" type="text" title="Campo Obligatorio"
-                                required>
-                        </div>
-                        <div>
-                            <label for="">TELEFONO</label>
-                            <input class="container_footermodalform_input" type="text" id="numero" name="numero"
-                                pattern="\d{10}" minlength="10" maxlength="10" title="Debe ser un número de 10 dígitos"
-                                required>
-                        </div>
-                        <div>
-                            <label for="">CANTIDAD DE PIZZAS</label>
-                            <input class="container_footermodalform_input" type="text" id="cantidad"
-                                name="cantidad" pattern="\d{1}" title="Debe ser un número de 1 dígitos" required>
-                        </div>
-                        
-                        <div class="container_footer_div">
-                            <label for="">DETALLES</label>
-                            <textarea class="container_footermodalform_input" rows="3" placeholder="Ingrese detalles del pedido" name="comentario"></textarea>
-                        </div>
-                    </section>
-                    <div>
-                        <button class="button_enviar_pedido" type="submit">ENVIAR PEDIDO</button>
-                    </div>
-                </form>
-            </dialog>
-        </section>
+
+        <button type="submit" onclick="enviarFormularios()" class="button_hacer_pedido">REALIZAR PEDIDO</button>
     </footer>
+
 </body>
-
-
-<script src="js/app.js"></script>
 
 </html>

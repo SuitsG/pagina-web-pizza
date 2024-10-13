@@ -2,160 +2,188 @@
 Fuente
 */
 
-@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Oleo+Script:wght@400;700&display=swap");
 
 :root {
-    --color-negro: black;
-    --color-blanco: #FFF;
-    --fuente-playfair: "Playfair Display", serif;
+  --color-negro: black;
+  --color-blanco: #fff;
+  --fuente-oleo: "Oleo Script", serif;
+  --color-rojo: #c00000;
+}
+
+* {
+  padding: 0;
+  margin: 0;
 }
 
 body {
-    background-image: url("https://img.freepik.com/vector-premium/bandera-italia-efecto-ondulado-proporcion-oficial_292608-2021.jpg");
-    background-size: cover;
-    /* Ajusta la imagen para que cubra todo el fondo */
-    background-repeat: no-repeat;
-    /* Evita que la imagen se repita */
-    background-position: center center;
-    /* Centra la imagen en la pantalla */
+  background-image: url("/assets/pizzafondo.png");
+  background-size: cover;
+  /* Ajusta la imagen para que cubra todo el fondo */
+  background-repeat: no-repeat;
+  /* Evita que la imagen se repita */
+  background-position: center center;
+  /* Centra la imagen en la pantalla */
+  background-attachment: fixed;
+  /* Hace que el fondo permanezca fijo al hacer scroll */
 }
-
 
 /*Header*/
 .container__header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    /* Centra verticalmente los elementos */
-    border: 5px solid rgb(0, 0, 0);
-    /* Contorno NEGRO */
-    border-radius: 15px;
-    /* Bordes redondeados */
-    padding: 10px;
-    margin: 20px auto;
-    /* Centra el header horizontalmente */
-    max-width: 1000px;
-    /* Limita el ancho máximo del encabezado */
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.container_header_imagen {
-    width: 100px;
-}
-
-.container_header_imagen2 {
-    width: 100px;
+.container__header__div {
+  height: 100px;
+  width: 50%;
+  margin: 50px;
+  overflow: hidden;
+  background-color: var(--color-rojo);
+  border-color: var(--color-negro);
+  border: 5px solid;
+  border-radius: 15px;
 }
 
 .container_header_titulo {
-    text-align: center;
-    font-family: var(--fuente-playfair);
-    font-size: 60px;
+  color: var(--color-blanco);
+  text-align: center;
+  font-family: var(--fuente-oleo);
+  font-size: 80px;
 }
 
 /*Main*/
 .container__main {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
 }
 
-.container_main_section {
-    display: flex;
-    gap: 15px;
-    flex-direction: column;
-    margin: 120px;
-}
-.container_mainsection_div {
-    display: flex;
-    place-items: center;
-    gap: 10px;
+.container__section__izquierda {
+  width: 40%;
+  white-space: nowrap;
+  overflow: hidden;
+  border-radius: 2rem;
+  border: 2px solid black;
 }
 
-    
-.container_main_imagenes {
-    width: 300px;
-    height: 100px;
-    aspect-ratio: 20/5;
-    object-fit: cover;
-    border: 3px solid rgb(0, 0, 0);
+.main__section__izquierda__slide {
+  display: inline-block;
+  animation: anima 40s linear infinite;
+}
+
+.container__main__section__imagen {
+  width: 70%;
+  height: 65vh;
+  border-radius: 2rem;
+}
+
+@keyframes anima {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-500%);
+  }
 }
 
 
-.container_main_label{
-    font-family: var(--fuente-playfair);
-    margin-left: 15px; /* Espacio entre la imagen y el texto */
-    font-size: 25px; 
+
+.container__form__derecha {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: var(--color-negro);
+  width: 600px;
+  height: 60vh;
+  border-radius: 25px;
+  padding: 1rem;
 }
 
-.container_mainsection_input {
-    width: 20px;
-    height: 20px;
-    transform: scale(1.5); /* Aumenta el tamaño del checkbox */
-    margin: 10px;
+.container__section__div {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.container__section__titulo {
+  text-align: center;
+  color: var(--color-blanco);
+  font-family: var(--fuente-oleo);
+  font-size: 50px;
+}
+
+.container__section__parrafo {
+  width: 15rem;
+  text-align: left;
+  white-space: pre;
+  color: var(--color-blanco);
+  font-family: var(--fuente-oleo);
+  font-size: 40px;
+}
+
+.container__section__input {
+  font-family: var(--fuente-oleo);
+  font-size: 30px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  gap: 1rem;
+  border-radius: 15px;
+}
+
+/*COMIENZA EL MAIN DOS*/
+.container__main__dos {
+  margin-top: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container_form_selection {
+  font-family: var(--fuente-oleo);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--color-negro);
+  width: 400px;
+  border-radius: 15px;
+  padding: 1rem;
+}
+
+.container__form__parrafo {
+  color: var(--color-blanco);
+  font-size: 50px;
+}
+
+.container__form__input {
+  padding-left: 20px;
+  width: 250px;
+  height: 30px;
+  border-radius: 15px;
+  font-size: 30px;
+  font-family: var(--fuente-oleo);
 }
 
 /*Footer*/
-.footer{
-display: flex;
-align-items: center;
-justify-content: center;
-}
-.container_footer_modal {
-    width: 60%;
-    height: 60%;
-    display: grid;
-    place-items: center;
+.footer {
+  display: flex;
+  justify-content: center;
+  margin: 1rem;
 }
 
-.container_footermodal_form {
-    display: flex;  
-    flex-direction:column;
-    gap: 20px;
-    align-items: center;
-
-}
-.container_footermodalform_selection{
-display: flex;
-flex-direction:column;
-gap: 30px;
-
-}
-.container_footermodalform_input{
- border-radius: 5px; /* Bordes redondeados */
-
-}
-
-.container_footermodalform_label {
-    font-family: var(--fuente-playfair);
-    border-radius: 10px; /* Bordes redondeados */
-
-}
-
-
-
-.button_hacer_pedido{
-    font-family: var(--fuente-playfair);
-    background: #d60000;
-    font-size: 40px;
-    color: aliceblue;
-    border-radius: 10px; /* Bordes redondeados */
-}
-.button_enviar_pedido{
-    font-family: var(--fuente-playfair);
-    background: #d60000;
-    font-size: 20px;
-    color: aliceblue;
-    border-radius: 10px; /* Bordes redondeados */
-
-}
-
-/* detalles de pedido */
-
-.detalle__pedido{
-font-size: 40px;
-}
-
-.container_footer_div{
-display: flex;
-flex-direction: column;
+.button_hacer_pedido {
+  padding: 10px;
+  font-family: var(--fuente-oleo);
+  background: var(--color-rojo);
+  font-size: 40px;
+  color: aliceblue;
+  border-radius: 10px;
+  /* Bordes redondeados */
 }
