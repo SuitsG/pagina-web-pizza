@@ -1,5 +1,6 @@
 <?php
 require_once('funciones.php');
+
 ?>
 
 <!DOCTYPE html>
@@ -28,6 +29,12 @@ require_once('funciones.php');
         <div class="main__div">
             <h1 class="main__div__titulo">Detalles pedido</h1>
             <div>
+                <p class="main__div__p"> <?= $imprimirJamonQueso; ?> </p>
+                <p class="main__div__p"> <?= $imprimirNapolitana; ?></p>
+                <p class="main__div__p"><?= $imprimirMozzarella; ?></p>
+                <p class="main__div__p"><?= $imprimirPepperoni; ?></p>
+                <p class="main__div__p"><?= $imprimirVeggie; ?></p>
+                <p class="main__div__p"><?= $imprimirHawaiana; ?></p>
                 <p class="main__div__p">Total de pizzas: <?= totalPizzas(); ?> </p>
                 <p class="main__div__p">Subtotal: <?= precioTotal(); ?> </p>
                 <p class="main__div__p">Iva: <?= $iva; ?> </p>

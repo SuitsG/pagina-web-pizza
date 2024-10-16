@@ -10,5 +10,30 @@
         "telefono": "1313131311",
         "direccion": "calrlr",
         "email": "yanceciblan@hotmail.com"
+    },
+
+    {
+        "pizzaJamonQueso": "0",
+        "pizzaNapolitana": "0",
+        "pizzaMozzarella": "0",
+        "pizzaPepperoni": "0",
+        "pizzaVeggie": "0",
+        "pizzaHawaiana": "0",
+        "nombre": "LALI",
+        "telefono": "7414454545",
+        "direccion": "PRPE",
+        "email": "LSLS@LSLS.COM"
+    },
+    {
+        "pizzaJamonQueso": "0",
+        "pizzaNapolitana": "0",
+        "pizzaMozzarella": "0",
+        "pizzaPepperoni": "0",
+        "pizzaVeggie": "0",
+        "pizzaHawaiana": "1",
+        "nombre": "LALI",
+        "telefono": "7414454545",
+        "direccion": "PRPE",
+        "email": "LSLS@LSLS.COM"
     }
 ]

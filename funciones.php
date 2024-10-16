@@ -17,7 +17,16 @@ $precioPepperoni = 22000;
 $precioVeggie = 18000;
 $precioHawaiana = 20000;
 
-function limpiarValor($valor) {
+$imprimirJamonQueso="";
+$imprimirNapolitana="";
+$imprimirMozzarella="";
+$imprimirPepperoni="";
+$imprimirVeggie="";
+$imprimirHawaiana="";
+
+
+function limpiarValor($valor)
+{
     return (!empty(trim($valor)) && is_numeric($valor)) ? (int) $valor : 0;
 }
 
@@ -40,12 +49,11 @@ function totalPizzas()
         $pepperoni +
         $veggie +
         $hawaiana;
-        
+
     return $totalPizza;
 }
-
-function precioTotal()
-{
+/*FUNCION PRECIO TOTAL */
+function precioTotal(){
     global $precioJamonQueso, $precioNapolitana, $precioMozzarella, $precioPepperoni, $precioVeggie, $precioHawaiana, $jamonQueso, $napolitana, $mozzarella, $pepperoni, $veggie, $hawaiana;
     $precioTotal =
         $precioJamonQueso * $jamonQueso +
@@ -55,9 +63,60 @@ function precioTotal()
         $precioVeggie * $veggie +
         $precioHawaiana * $hawaiana;
     return $precioTotal;
-
 }
 
 $iva = precioTotal() * 0.19;
 $precioTotalImprimir = precioTotal() + $iva;
-?>
+
+
+/*FUNCION PARA QUE SOLO APARECEN LAS PIZZAS SELECCIONADAS */
+/*
+$matchResult=match (true) {
+    $jamonQueso >= 1 =>$imprimirJamonQueso = "Jamón Queso: $jamonQueso",
+    $napolitana >= 1 =>$imprimirNapolitana = "Napolitana: $napolitana",
+    $mozzarella >= 1 =>$imprimirMozzarella = "Mozzarella: $mozzarella" ,
+    $pepperoni >= 1 =>$imprimirPepperoni = "Pepperoni: $pepperoni",
+    $veggie >= 1 =>$imprimirVeggie = "Veggie: $veggie",
+    $hawaiana >= 1 =>$imprimirHawaiana = "Hawaiana: $hawaiana",
+
+    default => "Por favor seleccione una pizza "
+};
+
+*/
+
+if ($jamonQueso >= 1) {
+    $imprimirJamonQueso = "Jamón Queso: $jamonQueso";
+}
+
+if ($napolitana >= 1) {
+    $imprimirNapolitana = "Napolitana: $napolitana";
+}
+
+if ($mozzarella >= 1) {
+    $imprimirMozzarella = "Mozzarella: $mozzarella";
+}
+
+if ($pepperoni >= 1) {
+    $imprimirPepperoni = "Pepperoni: $pepperoni";
+}
+
+if ($veggie >= 1) {
+    $imprimirVeggie = "Veggie: $veggie";
+}
+
+if ($hawaiana >= 1) {
+    $imprimirHawaiana = "Hawaiana: $hawaiana";
+}
+if (
+    empty($imprimirJamonQueso) && 
+    empty($imprimirNapolitana) && 
+    empty($imprimirMozzarella) && 
+    empty($imprimirPepperoni) && 
+    empty($imprimirVeggie) && 
+    empty($imprimirHawaiana)
+) {
+    header('Location: sinPedido.html');
+    exit();
+}
+
+
